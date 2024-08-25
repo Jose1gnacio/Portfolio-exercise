@@ -1,16 +1,29 @@
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita el envío del formulario
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    event.preventDefault();
 
-    if (name && email && message) {
-      alert("Gracias, " + name + ". Tu mensaje ha sido enviado.");
-      // Aquí puedes agregar más lógica, como enviar el formulario a un servidor.
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let errorMessage = "";
+
+    if (!name) {
+      errorMessage += "Por favor ingresa tu nombre.\n";
+    }
+    if (!email || !emailPattern.test(email)) {
+      errorMessage += "Por favor ingresa un email válido.\n";
+    }
+    if (!message) {
+      errorMessage += "Por favor ingresa un mensaje.\n";
+    }
+
+    if (errorMessage) {
+      alert(errorMessage);
     } else {
-      alert("Por favor completa todos los campos.");
+      alert("Gracias, " + name + ". Tu mensaje ha sido enviado.");
     }
   });
 
