@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header,
+footer {
+  background-color: #343a40;
+}
+
+h1,
+h2 {
+  color: #343a40;
+}
+
+p,
+ul,
+li {
+  color: #6c757d;
+}
+
+.nav-link {
+  color: #495057;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+/* Modo claro */
+body.light-mode {
+  background-color: #ffffff;
+  color: #343a40;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #343a40;
+}
+
+body.light-mode nav ul {
+  background-color: #f8f9fa; /* Fondo claro para el nav en modo claro */
+}
+
+body.light-mode h1 {
+  color: #ffffff;
+}
+
+body.light-mode h2 {
+  color: #343a40;
+}
+
+body.light-mode p,
+body.light-mode ul,
+body.light-mode li {
+  color: #6c757d;
+}
+
+body.light-mode .nav-link {
+  color: #495057;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode nav ul {
+  background-color: #1f1f1f; /* Fondo oscuro para el nav en modo oscuro */
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #ffffff;
+}
+
+body.dark-mode p,
+body.dark-mode ul,
+body.dark-mode li {
+  color: #d3d3d3;
+}
+
+body.dark-mode .nav-link {
+  color: #ffffff;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+}
+
+/* Estilos generales de las cartas */
+.card {
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Fondo por defecto de las cartas */
+  color: #343a40; /* Color de texto por defecto */
+  border: 1px solid #ddd; /* Borde de las cartas */
+}
+
+.card-title {
+  color: #343a40; /* Color del título por defecto */
+}
+
+.card-text {
+  color: #6c757d; /* Color del texto por defecto */
+}
+
+/* Modo oscuro para las cartas */
+body.dark-mode .card {
+  background-color: #1f1f1f; /* Fondo oscuro para las cartas */
+  color: #ffffff; /* Color de texto en modo oscuro */
+  border: 1px solid #333; /* Borde más oscuro */
+}
+
+body.dark-mode .card-title {
+  color: #ffffff; /* Color del título en modo oscuro */
+}
+
+body.dark-mode .card-text {
+  color: #d3d3d3; /* Color del texto en modo oscuro */
+}
+
+/* Asegurar que las imágenes se vean bien en ambos modos */
+.card-img-top {
+  border-bottom: 1px solid #ddd; /* Borde inferior por defecto */
+}
+
+body.dark-mode .card-img-top {
+  border-bottom: 1px solid #333; /* Borde inferior en modo oscuro */
+}
